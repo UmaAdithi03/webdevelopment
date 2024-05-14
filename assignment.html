@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style type="text/css">
+    /* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Section Styles */
+.section {
+    border: 1px solid black;
+    padding: 20px;
+    position: relative;
+    background-color: #f4f4f4;
+    flex-grow: 1;
+}
+
+.section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ccc;
+    padding: 5px 10px;
+    border: 1px solid black;
+    font-size: 1.25em;
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 992px) {
+    .section {
+        width: 30%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 48%;
+    }
+
+    .section:nth-child(3) {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .section {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Our Menu</h1>
+    </header>
+    <div class="container">
+        <section class="section" id="section1">
+            <div class="section-title">Chicken</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque.</p>
+        </section>
+        <section class="section" id="section2">
+            <div class="section-title">Beef</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque.</p>
+        </section>
+        <section class="section" id="section3">
+            <div class="section-title">Sushi</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque.</p>
+        </section>
+    </div>
+</body>
+</html>
